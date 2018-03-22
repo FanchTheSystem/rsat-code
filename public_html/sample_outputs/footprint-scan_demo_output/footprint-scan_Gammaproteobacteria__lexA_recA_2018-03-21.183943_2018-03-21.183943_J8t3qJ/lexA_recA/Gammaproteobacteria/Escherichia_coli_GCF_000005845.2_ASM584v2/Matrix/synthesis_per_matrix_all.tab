@@ -1,0 +1,3 @@
+#gene	TF	weight_at_th	occ_at_th	exp_at_th	sig_at_th	top_sig	score_at_topsig
+Matrix	lexA	5.9	4	12.98	350.00	350.00	9.9
+Matrix	recA	6.0	2	10.47	350.00	350.00	9.9
