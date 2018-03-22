@@ -1,0 +1,1753 @@
+<html>
+<header>
+<title>/space23/rsat/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab</title>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" /><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8">
+
+<script type="text/javascript">
+ <!-- 
+var stIsIE = /*@cc_on!@*/false;
+
+sorttable = {
+  init: function() {
+    // quit if this function has already been called
+    if (arguments.callee.done) return;
+    // flag this function so we don't do the same thing twice
+    arguments.callee.done = true;
+    // kill the timer
+    if (_timer) clearInterval(_timer);
+    
+    if (!document.createElement || !document.getElementsByTagName) return;
+    
+    sorttable.DATE_RE = /^(\d\d?)[\/\.-](\d\d?)[\/\.-]((\d\d)?\d\d)$/;
+    
+    forEach(document.getElementsByTagName('table'), function(table) {
+      if (table.className.search(/\bsortable\b/) != -1) {
+        sorttable.makeSortable(table);
+      }
+    });
+    
+  },
+  
+  makeSortable: function(table) {
+    if (table.getElementsByTagName('thead').length == 0) {
+      // table doesn't have a tHead. Since it should have, create one and
+      // put the first table row in it.
+      the = document.createElement('thead');
+      the.appendChild(table.rows[0]);
+      table.insertBefore(the,table.firstChild);
+    }
+    // Safari doesn't support table.tHead, sigh
+    if (table.tHead == null) table.tHead = table.getElementsByTagName('thead')[0];
+    
+    if (table.tHead.rows.length != 1) return; // can't cope with two header rows
+    
+    // Sorttable v1 put rows with a class of "sortbottom" at the bottom (as
+    // "total" rows, for example). This is B&R, since what you're supposed
+    // to do is put them in a tfoot. So, if there are sortbottom rows,
+    // for backwards compatibility, move them to tfoot (creating it if needed).
+    sortbottomrows = [];
+    for (var i=0; i<table.rows.length; i++) {
+      if (table.rows[i].className.search(/\bsortbottom\b/) != -1) {
+        sortbottomrows[sortbottomrows.length] = table.rows[i];
+      }
+    }
+    if (sortbottomrows) {
+      if (table.tFoot == null) {
+        // table doesn't have a tfoot. Create one.
+        tfo = document.createElement('tfoot');
+        table.appendChild(tfo);
+      }
+      for (var i=0; i<sortbottomrows.length; i++) {
+        tfo.appendChild(sortbottomrows[i]);
+      }
+      delete sortbottomrows;
+    }
+    
+    // work through each column and calculate its type
+    headrow = table.tHead.rows[0].cells;
+    for (var i=0; i<headrow.length; i++) {
+      // manually override the type with a sorttable_type attribute
+      if (!headrow[i].className.match(/\bsorttable_nosort\b/)) { // skip this col
+        mtch = headrow[i].className.match(/\bsorttable_([a-z0-9]+)\b/);
+        if (mtch) { override = mtch[1]; }
+	      if (mtch && typeof sorttable["sort_"+override] == 'function') {
+	        headrow[i].sorttable_sortfunction = sorttable["sort_"+override];
+	      } else {
+	        headrow[i].sorttable_sortfunction = sorttable.guessType(table,i);
+	      }
+	      // make it clickable to sort
+	      headrow[i].sorttable_columnindex = i;
+	      headrow[i].sorttable_tbody = table.tBodies[0];
+	      dean_addEvent(headrow[i],"click", function(e) {
+
+          if (this.className.search(/\bsorttable_sorted\b/) != -1) {
+            // if we're already sorted by this column, just 
+            // reverse the table, which is quicker
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted',
+                                                    'sorttable_sorted_reverse');
+            this.removeChild(document.getElementById('sorttable_sortfwdind'));
+            sortrevind = document.createElement('span');
+            sortrevind.id = "sorttable_sortrevind";
+            sortrevind.innerHTML = stIsIE ? '&nbsp<font face="webdings">5</font>' : '&nbsp;&#x25B4;';
+            this.appendChild(sortrevind);
+            return;
+          }
+          if (this.className.search(/\bsorttable_sorted_reverse\b/) != -1) {
+            // if we're already sorted by this column in reverse, just 
+            // re-reverse the table, which is quicker
+            sorttable.reverse(this.sorttable_tbody);
+            this.className = this.className.replace('sorttable_sorted_reverse',
+                                                    'sorttable_sorted');
+            this.removeChild(document.getElementById('sorttable_sortrevind'));
+            sortfwdind = document.createElement('span');
+            sortfwdind.id = "sorttable_sortfwdind";
+            sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+            this.appendChild(sortfwdind);
+            return;
+          }
+          
+          // remove sorttable_sorted classes
+          theadrow = this.parentNode;
+          forEach(theadrow.childNodes, function(cell) {
+            if (cell.nodeType == 1) { // an element
+              cell.className = cell.className.replace('sorttable_sorted_reverse','');
+              cell.className = cell.className.replace('sorttable_sorted','');
+            }
+          });
+          sortfwdind = document.getElementById('sorttable_sortfwdind');
+          if (sortfwdind) { sortfwdind.parentNode.removeChild(sortfwdind); }
+          sortrevind = document.getElementById('sorttable_sortrevind');
+          if (sortrevind) { sortrevind.parentNode.removeChild(sortrevind); }
+          
+          this.className += ' sorttable_sorted';
+          sortfwdind = document.createElement('span');
+          sortfwdind.id = "sorttable_sortfwdind";
+          sortfwdind.innerHTML = stIsIE ? '&nbsp<font face="webdings">6</font>' : '&nbsp;&#x25BE;';
+          this.appendChild(sortfwdind);
+
+	        // build an array to sort. This is a Schwartzian transform thing,
+	        // i.e., we "decorate" each row with the actual sort key,
+	        // sort based on the sort keys, and then put the rows back in order
+	        // which is a lot faster because you only do getInnerText once per row
+	        row_array = [];
+	        col = this.sorttable_columnindex;
+	        rows = this.sorttable_tbody.rows;
+	        for (var j=0; j<rows.length; j++) {
+	          row_array[row_array.length] = [sorttable.getInnerText(rows[j].cells[col]), rows[j]];
+	        }
+	        /* If you want a stable sort, uncomment the following line */
+	        //sorttable.shaker_sort(row_array, this.sorttable_sortfunction);
+	        /* and comment out this one */
+	        row_array.sort(this.sorttable_sortfunction);
+	        
+	        tb = this.sorttable_tbody;
+	        for (var j=0; j<row_array.length; j++) {
+	          tb.appendChild(row_array[j][1]);
+	        }
+	        
+	        delete row_array;
+	      });
+	    }
+    }
+  },
+  
+  guessType: function(table, column) {
+    // guess the type of a column based on its first non-blank row
+    sortfn = sorttable.sort_alpha;
+    for (var i=0; i<table.tBodies[0].rows.length; i++) {
+      text = sorttable.getInnerText(table.tBodies[0].rows[i].cells[column]);
+      if (text != '') {
+        if (text.match(/^-?[£$¤]?[\d,.]+%?$/)||text.match(/^\d+((\.|,)\d+)?(E|e)(\+|\-)\d+/)) {
+          return sorttable.sort_numeric;
+        }
+        // check for a date: dd/mm/yyyy or dd/mm/yy 
+        // can have / or . or - as separator
+        // can be mm/dd as well
+        possdate = text.match(sorttable.DATE_RE)
+        if (possdate) {
+          // looks like a date
+          first = parseInt(possdate[1]);
+          second = parseInt(possdate[2]);
+          if (first > 12) {
+            // definitely dd/mm
+            return sorttable.sort_ddmm;
+          } else if (second > 12) {
+            return sorttable.sort_mmdd;
+          } else {
+            // looks like a date, but we can't tell which, so assume
+            // that it's dd/mm (English imperialism!) and keep looking
+            sortfn = sorttable.sort_ddmm;
+          }
+        }
+      }
+    }
+    return sortfn;
+  },
+  
+  getInnerText: function(node) {
+    // gets the text we want to use for sorting for a cell.
+    // strips leading and trailing whitespace.
+    // this is *not* a generic getInnerText function; it's special to sorttable.
+    // for example, you can override the cell text with a customkey attribute.
+    // it also gets .value for <input> fields.
+    
+    hasInputs = (typeof node.getElementsByTagName == 'function') &&
+                 node.getElementsByTagName('input').length;
+    
+    if (node.getAttribute("sorttable_customkey") != null) {
+      return node.getAttribute("sorttable_customkey");
+    }
+    else if (typeof node.textContent != 'undefined' && !hasInputs) {
+      return node.textContent.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.innerText != 'undefined' && !hasInputs) {
+      return node.innerText.replace(/^\s+|\s+$/g, '');
+    }
+    else if (typeof node.text != 'undefined' && !hasInputs) {
+      return node.text.replace(/^\s+|\s+$/g, '');
+    }
+    else {
+      switch (node.nodeType) {
+        case 3:
+          if (node.nodeName.toLowerCase() == 'input') {
+            return node.value.replace(/^\s+|\s+$/g, '');
+          }
+        case 4:
+          return node.nodeValue.replace(/^\s+|\s+$/g, '');
+          break;
+        case 1:
+        case 11:
+          var innerText = '';
+          for (var i = 0; i < node.childNodes.length; i++) {
+            innerText += sorttable.getInnerText(node.childNodes[i]);
+          }
+          return innerText.replace(/^\s+|\s+$/g, '');
+          break;
+        default:
+          return '';
+      }
+    }
+  },
+  
+  reverse: function(tbody) {
+    // reverse the rows in a tbody
+    newrows = [];
+    for (var i=0; i<tbody.rows.length; i++) {
+      newrows[newrows.length] = tbody.rows[i];
+    }
+    for (var i=newrows.length-1; i>=0; i--) {
+       tbody.appendChild(newrows[i]);
+    }
+    delete newrows;
+  },
+  
+  /* sort functions
+     each sort function takes two parameters, a and b
+     you are comparing a[0] and b[0] */
+  /* Numeric order */
+  sort_numeric: function(a,b) {
+	aa = parseFloat(a[0].replace(/[^0-9.\-eE]/g,''));
+	if (isNaN(aa)) aa = 0;
+	bb = parseFloat(b[0].replace(/[^0-9.\-eE]/g,''));
+	if (isNaN(bb)) bb = 0;
+	return aa-bb;
+    },
+//   sort_numeric: function(a,b) {
+//     aa = parseFloat(a[0].replace(/[^0-9.-eE]/g,''));
+//     if (isNaN(aa)) aa = 0;
+//     bb = parseFloat(b[0].replace(/[^0-9.-eE]/g,'')); 
+//     if (isNaN(bb)) bb = 0;    
+//     return aa-bb;
+//   },
+
+  /* alphabetical order */
+  sort_alpha: function(a,b) {
+    if (a[0]==b[0]) return 0;
+    if (a[0]<b[0]) return -1;
+    return 1;
+  },
+
+  /* sort dates formatted as ddmm (day first, month after) */
+  sort_ddmm: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; m = mtch[2]; d = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+
+  /* sort dates formatted as mmdd (month first, day after) */
+  sort_mmdd: function(a,b) {
+    mtch = a[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt1 = y+m+d;
+    mtch = b[0].match(sorttable.DATE_RE);
+    y = mtch[3]; d = mtch[2]; m = mtch[1];
+    if (m.length == 1) m = '0'+m;
+    if (d.length == 1) d = '0'+d;
+    dt2 = y+m+d;
+    if (dt1==dt2) return 0;
+    if (dt1<dt2) return -1;
+    return 1;
+  },
+  
+  shaker_sort: function(list, comp_func) {
+    // A stable sort function to allow multi-level sorting of data
+    // see: http://en.wikipedia.org/wiki/Cocktail_sort
+    // thanks to Joseph Nahmias
+    var b = 0;
+    var t = list.length - 1;
+    var swap = true;
+
+    while(swap) {
+        swap = false;
+        for(var i = b; i < t; ++i) {
+            if ( comp_func(list[i], list[i+1]) > 0 ) {
+                var q = list[i]; list[i] = list[i+1]; list[i+1] = q;
+                swap = true;
+            }
+        } // for
+        t--;
+
+        if (!swap) break;
+
+        for(var i = t; i > b; --i) {
+            if ( comp_func(list[i], list[i-1]) < 0 ) {
+                var q = list[i]; list[i] = list[i-1]; list[i-1] = q;
+                swap = true;
+            }
+        } // for
+        b++;
+
+    } // while(swap)
+  }  
+}
+
+/* ******************************************************************
+   Supporting functions: bundled here to avoid depending on a library
+   ****************************************************************** */
+
+// Dean Edwards/Matthias Miller/John Resig
+
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+    document.addEventListener("DOMContentLoaded", sorttable.init, false);
+}
+
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+    document.write("<script id=__ie_onload defer src=javascript:void(0)><\/script>");
+    var script = document.getElementById("__ie_onload");
+    script.onreadystatechange = function() {
+        if (this.readyState == "complete") {
+            sorttable.init(); // call the onload handler
+        }
+    };
+/*@end @*/
+
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+    var _timer = setInterval(function() {
+        if (/loaded|complete/.test(document.readyState)) {
+            sorttable.init(); // call the onload handler
+        }
+    }, 10);
+}
+
+/* for other browsers */
+window.onload = sorttable.init;
+
+// written by Dean Edwards, 2005
+// with input from Tino Zijdel, Matthias Miller, Diego Perini
+
+// http://dean.edwards.name/weblog/2005/10/add-event/
+
+function dean_addEvent(element, type, handler) {
+	if (element.addEventListener) {
+		element.addEventListener(type, handler, false);
+	} else {
+		// assign each event handler a unique ID
+		if (!handler.$$guid) handler.$$guid = dean_addEvent.guid++;
+		// create a hash table of event types for the element
+		if (!element.events) element.events = {};
+		// create a hash table of event handlers for each element/event pair
+		var handlers = element.events[type];
+		if (!handlers) {
+			handlers = element.events[type] = {};
+			// store the existing event handler (if there is one)
+			if (element["on" + type]) {
+				handlers[0] = element["on" + type];
+			}
+		}
+		// store the event handler in the hash table
+		handlers[handler.$$guid] = handler;
+		// assign a global event handler to do all the work
+		element["on" + type] = handleEvent;
+	}
+};
+// a counter used to create unique IDs
+dean_addEvent.guid = 1;
+
+function removeEvent(element, type, handler) {
+	if (element.removeEventListener) {
+		element.removeEventListener(type, handler, false);
+	} else {
+		// delete the event handler from the hash table
+		if (element.events && element.events[type]) {
+			delete element.events[type][handler.$$guid];
+		}
+	}
+};
+
+function handleEvent(event) {
+	var returnValue = true;
+	// grab the event object (IE uses a global event object)
+	event = event || fixEvent(((this.ownerDocument || this.document || this).parentWindow || window).event);
+	// get a reference to the hash table of event handlers
+	var handlers = this.events[event.type];
+	// execute each event handler
+	for (var i in handlers) {
+		this.$$handleEvent = handlers[i];
+		if (this.$$handleEvent(event) === false) {
+			returnValue = false;
+		}
+	}
+	return returnValue;
+};
+
+function fixEvent(event) {
+	// add W3C standard event methods
+	event.preventDefault = fixEvent.preventDefault;
+	event.stopPropagation = fixEvent.stopPropagation;
+	return event;
+};
+fixEvent.preventDefault = function() {
+	this.returnValue = false;
+};
+fixEvent.stopPropagation = function() {
+  this.cancelBubble = true;
+}
+
+// Dean's forEach: http://dean.edwards.name/base/forEach.js
+/*
+	forEach, version 1.0
+	Copyright 2006, Dean Edwards
+	License: http://www.opensource.org/licenses/mit-license.php
+*/
+
+// array-like enumeration
+if (!Array.forEach) { // mozilla already supports this
+	Array.forEach = function(array, block, context) {
+		for (var i = 0; i < array.length; i++) {
+			block.call(context, array[i], i, array);
+		}
+	};
+}
+
+// generic enumeration
+Function.prototype.forEach = function(object, block, context) {
+	for (var key in object) {
+		if (typeof this.prototype[key] == "undefined") {
+			block.call(context, object[key], key, object);
+		}
+	}
+};
+
+// character enumeration
+String.forEach = function(string, block, context) {
+	Array.forEach(string.split(""), function(chr, index) {
+		block.call(context, chr, index, string);
+	});
+};
+
+// globally resolve forEach enumeration
+var forEach = function(object, block, context) {
+	if (object) {
+		var resolve = Object; // default
+		if (object instanceof Function) {
+			// functions have a "length" property
+			resolve = Function;
+		} else if (object.forEach instanceof Function) {
+			// the object implements a custom forEach method so use that
+			object.forEach(block, context);
+			return;
+		} else if (typeof object == "string") {
+			// the object is a string
+			resolve = String;
+		} else if (typeof object.length == "number") {
+			// the object is array-like
+			resolve = Array;
+		}
+		resolve.forEach(object, block, context);
+	}
+}
+
+// --> 
+</script>
+<style type='text/css'>
+/* Style sheet for the HTML formatting of RSAT results */
+
+/* BODY  */
+body {
+       font-family: Verdana, Helvetica, Arial, sans-serif;
+       font-size: 70%;
+       margin-top: 2px;
+       margin-left: 20px;
+       text-align: justify;
+       background: #ffffff;
+       margin-right: 20px;
+/*       background: #0D73A7 url(images/bullet2-normal.gif) no-repeat 7px 7px;*/
+}
+
+
+/* div for menu */
+
+#Menu_space {
+	margin-top:120px;
+	margin-bottom:300px;
+}
+#Menu_wait {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:400px;
+	margin-left: -200px;
+	padding:10px;
+	text-align:center;
+	}
+
+#Menu {
+	position:absolute;
+	top:120px;
+	left:50%;
+	width:800px;
+	margin-left: -400px;
+	padding:10px;
+	background-color:#eee;
+	border:1px dashed #999;
+	line-height:17px;
+	font-size: 110%;
+	voice-family: "\"}\"";
+	voice-family:inherit;
+	text-align:left;
+	}
+
+#Menu h3 {
+	margin:0;
+	text-align:center;
+	padding-bottom:5px;
+}
+
+#Menu ul {
+	list-style-type:none;
+}
+
+/* TABLE */
+#Menu table {
+	margin: 10px 10px 10px;
+}
+
+#Menu  td, th {
+	font-size: 70%;
+	padding: 2px 10px;
+	vertical-align:top;
+}
+
+.menulink a:link,a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink a:visited {
+	color:#cc6600;
+	background: transparent;
+	text-decoration: none;
+	}
+
+.menulink A:active {
+	color: #cc6600;
+	background: transparent;
+	text-decoration: none
+}
+
+.menulink A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+
+/* Links  */
+
+A:link,A:visited {
+	color: #0D73A7;
+	background: transparent;
+	text-decoration: none;
+}
+
+A:active {
+	color: #ff0000;
+	background: transparent;
+	text-decoration: none
+}
+
+A:hover {
+	text-decoration: underline;
+	color: #cc6600;
+}
+
+/* Headers  */
+
+h1 {
+	margin-top: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	border: 1px solid #2D282E;
+	background-color: #0D73A7;
+	font-size: 16px;
+	color: #D6EEFA;
+}
+h1 a:link, h1 a:visited {
+	color: #D6EEFA;
+}
+
+h1 a:hover {
+	color: #ffffff;
+}
+
+h2 {
+	margin-top: 10px;
+	padding-top: 15px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 15px;
+}
+
+h3 {
+	margin-top: 6px;
+	padding-top: 6px;
+	margin-bottom: 0px;
+	color: #002266;
+	font-size: 11px;
+}
+
+h4 {
+	margin-top: 4px;
+	padding-top: 4px;
+	margin-bottom: 0px;
+	color : #2D282E;
+	font-size: 11px;
+}
+
+h2.motif {
+	margin-top: 3px;
+	padding-top: 0px;
+	margin-bottom: 4px;
+	color : #2D282E;
+	font-size: 12px;
+}
+
+/* Other tag formatting  */
+hr {
+	border: 1px dotted #2D282E;
+	height: 1px;
+}
+
+hr.solid {
+	border: 1px solid #2D282E;
+	height: 1px;
+}
+
+pre,tt {
+         font-size: 12px;
+}
+
+pre { 
+      background:#EEEEEE;
+ }
+
+
+center {
+	margin-top: 5px;
+	margin-bottom: 20px;
+	font-weight: bold;
+}
+
+blockquote {
+	color : #cc6600;
+	font-size: 12px;
+}
+
+body blockquote.information {
+	color : #009900;
+	font-size: 12px;
+}
+
+body blockquote.warning {
+	color : #aa0000;
+	font-size: 12px;
+}
+
+blockquote.demo {
+	color : #000000;
+	font-size: 12px;
+	font-style:italic;
+}
+
+
+
+/* TABLE */
+table.simple {
+	margin: 10px 20px 20px;
+	color: #000000;
+}
+
+table.simple td,table.list th {
+	font-size: 70%;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+	page-break-inside: auto;
+}
+
+table.simple th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+/* TABLE */
+
+/* table with white bg and small fonts */
+table.whitebg {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.whitebg td,table.whitebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+	page-break-inside: auto;
+}
+
+
+/* table with blue bg and small font */
+table.whitebg th {
+	font-size: 70%;
+	background-color: #F6E6CA;
+}
+
+table.bluebg {
+	color: #333333;
+	border-left: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	}
+
+table.bluebg td,table.bluebg th {
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	background-color: #D6EEFA;
+	page-break-inside: auto;
+}
+
+table.bluebg th {
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+	
+/* Table on result pages - compatible with the sorttable type defined by javascript */
+
+table.sortable {
+	margin: 10px 20px 20px;
+	color: #000000;
+	border-left: 1px solid #cbcbb4;
+	border-right: 1px solid #cbcbb4;
+	border-top: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	border-spacing: 0px;
+}
+
+table.sortable td,table.sortable th {
+	padding: 2px 10px;
+	font-size: 70%;
+	border-right: 1px solid #cbcbb4;
+	border-bottom: 1px solid #cbcbb4;
+	padding: 2px 10px;
+	background-color: #FFFFFF;
+	page-break-inside: auto;
+}
+
+table.sortable th {
+	font-size: 70%;
+	background-color: #0D73A7;
+	color: #D6EEFA;
+}
+
+
+/* LINK TABLE ON RESULTS PAGES */
+table.resultlink {
+	margin-left:5px;
+	width : 90%;
+	color: #2D282E;
+	background-color: #D6EEFA;
+}
+
+
+table.resultlink td, table.resultlink th {
+	font-size: 70%;
+	padding-left:5px;
+	padding-right:3px;
+	text-align :left;
+	page-break-inside: auto;
+}
+
+/* COLLAPSIBLE MENUS */
+
+.menu_heading_open {
+	background: url(images_html/arrow_box_down.gif) no-repeat 5px 7px;
+	text-decoration: none;
+	padding: 0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+	display: block;
+}
+
+.menu_heading_closed {
+	background: url(images_html/arrow_box.gif) no-repeat 5px 7px;
+	text-decoration: underline; 
+	display: block;
+	padding:0px 6px 4px 21px;
+	margin: 0;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.menu_collapsible {
+	display: none;
+	margin-bottom: 10px;
+	margin-left: 30px;
+}
+
+.menu_collapsible_display {
+   display: block;
+   margin-bottom: 10px;
+   margin-left: 30px;
+}
+</style>
+<header>
+<body bgcolor='#ffffff'>
+<pre> dyad-analysis  -v 1 -return occ,proba,rank -expfreq $RSAT/public_html/data/taxon_frequencies/Gammaproteobacteria/dyads_3nt_sp0-20_upstream-noorf_Gammaproteobacteria-noov-2str.freq -accept $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_filter_dyads.tab -lth occ 1 -lth occ_sig 0 -uth rank 50 -i $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_seq_purged.fasta -l 3 -sp 0-20 -2str -noov -sort -o $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab
+ Citation: van Helden et al. (2000). Nucleic Acids Res. 28(8):1808-18.
+ Program version              	1.78
+ Input file                   	$RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_seq_purged.fasta
+ Accepted dyad file           	$RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_filter_dyads.tab
+ Accepted dyads               	3469
+ Sequence type                	DNA
+ Output file                  	$RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab
+ default return values        	freq,occ
+ return values                	proba,occ,exp_freq,exp_occ,rank
+ Discard overlapping matches
+ Counted on both strands
+ 	grouped by pairs of reverse complements
+ Monad parameters             
+ 	monad size                  	3
+ 	monad positions              368958
+ 	    valid                    	79978
+ 	    discarded                	288980 (contain other letters than ACGT)
+ 	distinct monads              64
+ Dyad parameters              
+ 	dyad type                    any dyad
+ 	minimal spacing              0
+ 	maximal spacing              20
+ 	distinct dyads               	43680
+ 	dyads tested for significance	1757
+	Dyad counts per spacing
+		spacing	max_pos	occ	ovlps	ovl+occ	ACGT	nonACGT
+		sp 0	361414	5742	106	5848	77439	283975
+		sp 1	358922	5298	113	5411	76642	282280
+		sp 2	356430	5209	138	5347	75869	280561
+		sp 3	353938	5023	102	5125	75112	278826
+		sp 4	351447	5123	124	5247	74366	277081
+		sp 5	348956	5415	127	5542	73633	275323
+		sp 6	346465	5089	149	5238	72908	273557
+		sp 7	343975	4982	183	5165	72192	271783
+		sp 8	341486	5177	179	5356	71484	270002
+		sp 9	338997	4501	376	4877	70783	268214
+		sp 10	336508	4286	126	4412	70110	266398
+		sp 11	334019	4404	199	4603	69449	264570
+		sp 12	331530	3882	100	3982	68798	262732
+		sp 13	329041	3884	89	3973	68154	260887
+		sp 14	326552	3645	131	3776	67518	259034
+		sp 15	324063	3529	133	3662	66887	257176
+		sp 16	321574	3664	200	3864	66265	255309
+		sp 17	319085	3730	193	3923	65652	253433
+		sp 18	316596	3644	281	3925	65044	251552
+		sp 19	314107	3301	230	3531	64439	249668
+		sp 20	311618	3242	191	3433	63842	247776
+ Estimation of expected dyad frequencies
+	Background model	exp_freq_file
+	exp. freq. file       	$RSAT/public_html/data/taxon_frequencies/Gammaproteobacteria/dyads_3nt_sp0-20_upstream-noorf_Gammaproteobacteria-noov-2str.freq
+ column headers
+	1	sequence       	
+	2	identifier             	
+	3	expected_freq  	
+	4	occ            	observed occurrences
+	5	exp_occ        	expected occurrences
+	6	occ_P          	occurrence probability (binomial)
+	7	occ_E          	E-value for occurrences (binomial)
+	8	occ_sig        	occurrence significance (binomial)
+	9	rank           	rank
+	10	ovl_occ        	number of overlapping occurrences
+	11	all_occ        	number of non-overlapping + overlapping occurrences
+	12	ov_coef        	overlap coefficient
+	13	remark         	remark (dir_rep=direct repeat; rc_pal=reverse complementary palindrom)
+</pre>
+
+<table  class="sortable"  cellspacing='1' cellpadding='3' border='1'>
+<tr valign='top'>
+<th align='left' >sequence  </th>
+<th align='left'>identifier             </th>
+<th align='left'>expected_freq</th>
+<th align='left'>occ</th>
+<th align='left'>exp_occ</th>
+<th align='left'>occ_P</th>
+<th align='left'>occ_E</th>
+<th align='left'>occ_sig</th>
+<th align='left'>rank</th>
+<th align='left'>ovl_occ</th>
+<th align='left'>all_occ</th>
+<th align='left'>ov_coef</th>
+<th align='left'>remark</th>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{10}cag</td>
+<td>ctgn{10}cag|ctgn{10}cag</td>
+<td>0.0003456874153</td>
+<td>    314</td>
+<td>   1.48</td>
+<td>4.5e-226</td>
+<td>8.0e-223</td>
+<td> 222.10</td>
+<td>      1</td>
+<td>0</td>
+<td>314</td>
+<td> 1.0000</td>
+<td>rc_pal</td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{9}aca</td>
+<td>ctgn{9}aca|tgtn{9}cag</td>
+<td>0.0005083601722</td>
+<td>    346</td>
+<td>   2.29</td>
+<td>4.1e-208</td>
+<td>7.2e-205</td>
+<td> 204.14</td>
+<td>      2</td>
+<td>195</td>
+<td>541</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{8}tac</td>
+<td>ctgn{8}tac|gtan{8}cag</td>
+<td>0.0003739946179</td>
+<td>    281</td>
+<td>   1.94</td>
+<td>3.7e-179</td>
+<td>6.5e-176</td>
+<td> 175.18</td>
+<td>      3</td>
+<td>8</td>
+<td>289</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tgtn{8}aca</td>
+<td>tgtn{8}aca|tgtn{8}aca</td>
+<td>0.0002933554708</td>
+<td>    246</td>
+<td>   1.52</td>
+<td>9.2e-168</td>
+<td>1.6e-164</td>
+<td> 163.79</td>
+<td>      4</td>
+<td>0</td>
+<td>246</td>
+<td> 1.0000</td>
+<td>rc_pal</td>
+</tr>
+
+<tr valign='top'>
+<td>actn{11}cag</td>
+<td>actn{11}cag|ctgn{11}agt</td>
+<td>0.0004108612830</td>
+<td>    264</td>
+<td>   1.81</td>
+<td>2.8e-155</td>
+<td>4.8e-152</td>
+<td> 151.32</td>
+<td>      5</td>
+<td>61</td>
+<td>325</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{0}cag</td>
+<td>atan{0}cag|ctgn{0}tat</td>
+<td>0.0005080478754</td>
+<td>    300</td>
+<td>   2.92</td>
+<td>5.7e-154</td>
+<td>1.0e-150</td>
+<td> 150.00</td>
+<td>      6</td>
+<td>0</td>
+<td>300</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{1}ata</td>
+<td>ctgn{1}ata|tatn{1}cag</td>
+<td>0.0005906601121</td>
+<td>    316</td>
+<td>   3.13</td>
+<td>1.3e-151</td>
+<td>2.3e-148</td>
+<td> 147.63</td>
+<td>      7</td>
+<td>0</td>
+<td>316</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tatn{0}aca</td>
+<td>tatn{0}aca|tgtn{0}ata</td>
+<td>0.0004887765724</td>
+<td>    282</td>
+<td>   2.81</td>
+<td>2.2e-142</td>
+<td>3.9e-139</td>
+<td> 138.41</td>
+<td>      8</td>
+<td>15</td>
+<td>297</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>gtan{7}aca</td>
+<td>gtan{7}aca|tgtn{7}tac</td>
+<td>0.0003742870433</td>
+<td>    242</td>
+<td>   1.86</td>
+<td>1.9e-139</td>
+<td>3.3e-136</td>
+<td> 135.48</td>
+<td>      9</td>
+<td>25</td>
+<td>267</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{6}cag</td>
+<td>atan{6}cag|ctgn{6}tat</td>
+<td>0.0005962825672</td>
+<td>    275</td>
+<td>   3.03</td>
+<td>3.5e-122</td>
+<td>6.1e-119</td>
+<td> 118.21</td>
+<td>     10</td>
+<td>1</td>
+<td>276</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{7}ata</td>
+<td>ctgn{7}ata|tatn{7}cag</td>
+<td>0.0005710708062</td>
+<td>    259</td>
+<td>   2.85</td>
+<td>1.6e-114</td>
+<td>2.7e-111</td>
+<td> 110.56</td>
+<td>     11</td>
+<td>4</td>
+<td>263</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{0}gta</td>
+<td>actn{0}gta|tacn{0}agt</td>
+<td>0.0003689572643</td>
+<td>    215</td>
+<td>   2.12</td>
+<td>8.2e-110</td>
+<td>1.4e-106</td>
+<td> 105.84</td>
+<td>     12</td>
+<td>0</td>
+<td>215</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tatn{6}aca</td>
+<td>tatn{6}aca|tgtn{6}ata</td>
+<td>0.0006914357351</td>
+<td>    259</td>
+<td>   3.52</td>
+<td>7.2e-96</td>
+<td>1.3e-92</td>
+<td>  91.90</td>
+<td>     13</td>
+<td>9</td>
+<td>268</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{2}ata</td>
+<td>actn{2}ata|tatn{2}agt</td>
+<td>0.0005473261470</td>
+<td>    222</td>
+<td>   2.85</td>
+<td>1.5e-85</td>
+<td>2.6e-82</td>
+<td>  81.58</td>
+<td>     14</td>
+<td>4</td>
+<td>226</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{1}aca</td>
+<td>atan{1}aca|tgtn{1}tat</td>
+<td>0.0007268155597</td>
+<td>    250</td>
+<td>   3.85</td>
+<td>5.9e-81</td>
+<td>1.0e-77</td>
+<td>  76.98</td>
+<td>     15</td>
+<td>6</td>
+<td>256</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{1}tat</td>
+<td>actn{1}tat|atan{1}agt</td>
+<td>0.0005888404156</td>
+<td>    222</td>
+<td>   3.12</td>
+<td>4.5e-79</td>
+<td>7.9e-76</td>
+<td>  75.10</td>
+<td>     16</td>
+<td>3</td>
+<td>225</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{5}aca</td>
+<td>atan{5}aca|tgtn{5}tat</td>
+<td>0.0007718740120</td>
+<td>    247</td>
+<td>   4.18</td>
+<td>2.5e-77</td>
+<td>4.3e-74</td>
+<td>  73.36</td>
+<td>     17</td>
+<td>5</td>
+<td>252</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{0}tac</td>
+<td>atan{0}tac|gtan{0}tat</td>
+<td>0.0004714560800</td>
+<td>    195</td>
+<td>   2.71</td>
+<td>2.6e-75</td>
+<td>4.6e-72</td>
+<td>  71.34</td>
+<td>     18</td>
+<td>63</td>
+<td>258</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{2}cag</td>
+<td>atan{2}cag|ctgn{2}tat</td>
+<td>0.0006594312496</td>
+<td>    227</td>
+<td>   3.43</td>
+<td>1.6e-74</td>
+<td>2.8e-71</td>
+<td>  70.55</td>
+<td>     19</td>
+<td>1</td>
+<td>228</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{3}ata</td>
+<td>ctgn{3}ata|tatn{3}cag</td>
+<td>0.0006483049960</td>
+<td>    208</td>
+<td>   3.26</td>
+<td>3.2e-64</td>
+<td>5.7e-61</td>
+<td>  60.25</td>
+<td>     20</td>
+<td>12</td>
+<td>220</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tatn{0}ata</td>
+<td>tatn{0}ata|tatn{0}ata</td>
+<td>0.0004010086656</td>
+<td>    165</td>
+<td>   2.30</td>
+<td>  1e-63</td>
+<td>1.8e-60</td>
+<td>  59.74</td>
+<td>     21</td>
+<td>5</td>
+<td>170</td>
+<td> 1.0664</td>
+<td>rc_pal</td>
+</tr>
+
+<tr valign='top'>
+<td>cctn{11}cag</td>
+<td>cctn{11}cag|ctgn{11}agg</td>
+<td>0.0004347873990</td>
+<td>    162</td>
+<td>   1.91</td>
+<td>3.8e-63</td>
+<td>6.7e-60</td>
+<td>  59.17</td>
+<td>     22</td>
+<td>5</td>
+<td>167</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{5}ata</td>
+<td>ctgn{5}ata|tatn{5}cag</td>
+<td>0.0005996195247</td>
+<td>    191</td>
+<td>   3.25</td>
+<td>6.2e-60</td>
+<td>1.1e-56</td>
+<td>  55.96</td>
+<td>     23</td>
+<td>2</td>
+<td>193</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tatn{2}aca</td>
+<td>tatn{2}aca|tgtn{2}ata</td>
+<td>0.0008003481114</td>
+<td>    226</td>
+<td>   4.17</td>
+<td>1.9e-59</td>
+<td>3.3e-56</td>
+<td>  55.49</td>
+<td>     24</td>
+<td>17</td>
+<td>243</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>gtan{1}ata</td>
+<td>gtan{1}ata|tatn{1}tac</td>
+<td>0.0005564973169</td>
+<td>    181</td>
+<td>   2.95</td>
+<td>9.9e-56</td>
+<td>1.7e-52</td>
+<td>  51.76</td>
+<td>     25</td>
+<td>64</td>
+<td>245</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{4}cag</td>
+<td>atan{4}cag|ctgn{4}tat</td>
+<td>0.0006338089480</td>
+<td>    189</td>
+<td>   3.25</td>
+<td>1.4e-54</td>
+<td>2.5e-51</td>
+<td>  50.61</td>
+<td>     26</td>
+<td>12</td>
+<td>201</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>cctn{10}aca</td>
+<td>cctn{10}aca|tgtn{10}agg</td>
+<td>0.0004405193135</td>
+<td>    148</td>
+<td>   1.89</td>
+<td>5.2e-52</td>
+<td>9.2e-49</td>
+<td>  48.04</td>
+<td>     27</td>
+<td>3</td>
+<td>151</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{12}agg</td>
+<td>actn{12}agg|cctn{12}agt</td>
+<td>0.0003242987355</td>
+<td>    116</td>
+<td>   1.26</td>
+<td>1.9e-44</td>
+<td>3.3e-41</td>
+<td>  40.48</td>
+<td>     28</td>
+<td>0</td>
+<td>116</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>cctn{9}tac</td>
+<td>cctn{9}tac|gtan{9}agg</td>
+<td>0.0003293593663</td>
+<td>    117</td>
+<td>   1.48</td>
+<td>2.3e-43</td>
+<td>4.0e-40</td>
+<td>  39.40</td>
+<td>     29</td>
+<td>0</td>
+<td>117</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{9}cca</td>
+<td>ctgn{9}cca|tggn{9}cag</td>
+<td>0.0004372000158</td>
+<td>    132</td>
+<td>   1.97</td>
+<td>2.3e-41</td>
+<td>4.0e-38</td>
+<td>  37.40</td>
+<td>     30</td>
+<td>2</td>
+<td>134</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tatn{4}aca</td>
+<td>tatn{4}aca|tgtn{4}ata</td>
+<td>0.0007292375725</td>
+<td>    176</td>
+<td>   3.74</td>
+<td>3.1e-39</td>
+<td>5.5e-36</td>
+<td>  35.26</td>
+<td>     31</td>
+<td>5</td>
+<td>181</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>tggn{8}aca</td>
+<td>tggn{8}aca|tgtn{8}cca</td>
+<td>0.0003741727687</td>
+<td>    114</td>
+<td>   1.94</td>
+<td>  6e-36</td>
+<td>1.1e-32</td>
+<td>  31.98</td>
+<td>     32</td>
+<td>0</td>
+<td>114</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>gtan{3}aca</td>
+<td>gtan{3}aca|tgtn{3}tac</td>
+<td>0.0003877729118</td>
+<td>    119</td>
+<td>   1.95</td>
+<td>8.9e-36</td>
+<td>1.6e-32</td>
+<td>  31.80</td>
+<td>     33</td>
+<td>6</td>
+<td>125</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>aacn{12}cag</td>
+<td>aacn{12}cag|ctgn{12}gtt</td>
+<td>0.0005532558071</td>
+<td>    136</td>
+<td>   2.15</td>
+<td>9.2e-35</td>
+<td>1.6e-31</td>
+<td>  30.79</td>
+<td>     34</td>
+<td>7</td>
+<td>143</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>gtan{2}tac</td>
+<td>gtan{2}tac|gtan{2}tac</td>
+<td>0.0001341736266</td>
+<td>     70</td>
+<td>   0.70</td>
+<td>1.3e-34</td>
+<td>2.2e-31</td>
+<td>  30.66</td>
+<td>     35</td>
+<td>0</td>
+<td>70</td>
+<td> 1.0000</td>
+<td>rc_pal</td>
+</tr>
+
+<tr valign='top'>
+<td>cctn{8}ata</td>
+<td>cctn{8}ata|tatn{8}agg</td>
+<td>0.0005024079917</td>
+<td>    130</td>
+<td>   2.60</td>
+<td>7.7e-34</td>
+<td>1.4e-30</td>
+<td>  29.87</td>
+<td>     36</td>
+<td>0</td>
+<td>130</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{12}ctg</td>
+<td>atan{12}ctg|cagn{12}tat</td>
+<td>0.0005414740995</td>
+<td>    128</td>
+<td>   2.10</td>
+<td>2.9e-31</td>
+<td>5.1e-28</td>
+<td>  27.29</td>
+<td>     37</td>
+<td>5</td>
+<td>133</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{7}agg</td>
+<td>atan{7}agg|cctn{7}tat</td>
+<td>0.0005135899914</td>
+<td>    126</td>
+<td>   2.56</td>
+<td>2.3e-30</td>
+<td>4.0e-27</td>
+<td>  26.40</td>
+<td>     38</td>
+<td>0</td>
+<td>126</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>cagn{13}ata</td>
+<td>cagn{13}ata|tatn{13}ctg</td>
+<td>0.0005599987026</td>
+<td>    126</td>
+<td>   2.18</td>
+<td>  3e-29</td>
+<td>5.2e-26</td>
+<td>  25.28</td>
+<td>     39</td>
+<td>10</td>
+<td>136</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{4}ata</td>
+<td>actn{4}ata|tatn{4}agt</td>
+<td>0.0005972642552</td>
+<td>    137</td>
+<td>   3.06</td>
+<td>7.4e-29</td>
+<td>1.3e-25</td>
+<td>  24.89</td>
+<td>     40</td>
+<td>8</td>
+<td>145</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{3}tat</td>
+<td>actn{3}tat|atan{3}agt</td>
+<td>0.0006096237898</td>
+<td>    138</td>
+<td>   3.06</td>
+<td>4.1e-28</td>
+<td>7.1e-25</td>
+<td>  24.15</td>
+<td>     41</td>
+<td>1</td>
+<td>139</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>gtgn{5}ata</td>
+<td>gtgn{5}ata|tatn{5}cac</td>
+<td>0.0004598655572</td>
+<td>    115</td>
+<td>   2.49</td>
+<td>7.5e-28</td>
+<td>1.3e-24</td>
+<td>  23.88</td>
+<td>     42</td>
+<td>1</td>
+<td>116</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{11}aga</td>
+<td>ctgn{11}aga|tctn{11}cag</td>
+<td>0.0004165660271</td>
+<td>    105</td>
+<td>   1.83</td>
+<td>9.2e-28</td>
+<td>1.6e-24</td>
+<td>  23.79</td>
+<td>     43</td>
+<td>2</td>
+<td>107</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{10}cca</td>
+<td>actn{10}cca|tggn{10}agt</td>
+<td>0.0002994277595</td>
+<td>     88</td>
+<td>   1.28</td>
+<td>1.1e-27</td>
+<td>2.0e-24</td>
+<td>  23.70</td>
+<td>     44</td>
+<td>0</td>
+<td>88</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>atan{3}aca</td>
+<td>atan{3}aca|tgtn{3}tat</td>
+<td>0.0008723676684</td>
+<td>    169</td>
+<td>   4.38</td>
+<td>1.2e-26</td>
+<td>2.0e-23</td>
+<td>  22.69</td>
+<td>     45</td>
+<td>12</td>
+<td>181</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{4}tac</td>
+<td>ctgn{4}tac|gtan{4}cag</td>
+<td>0.0003870569077</td>
+<td>    102</td>
+<td>   1.98</td>
+<td>  3e-26</td>
+<td>5.3e-23</td>
+<td>  22.28</td>
+<td>     46</td>
+<td>0</td>
+<td>102</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{6}ata</td>
+<td>actn{6}ata|tatn{6}agt</td>
+<td>0.0005931467013</td>
+<td>    128</td>
+<td>   3.02</td>
+<td>1.5e-25</td>
+<td>2.7e-22</td>
+<td>  21.57</td>
+<td>     47</td>
+<td>4</td>
+<td>132</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>ctgn{8}cac</td>
+<td>ctgn{8}cac|gtgn{8}cag</td>
+<td>0.0004163015311</td>
+<td>    101</td>
+<td>   2.16</td>
+<td>1.2e-24</td>
+<td>2.1e-21</td>
+<td>  20.68</td>
+<td>     48</td>
+<td>0</td>
+<td>101</td>
+<td> 1.0010</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>actn{2}cag</td>
+<td>actn{2}cag|ctgn{2}agt</td>
+<td>0.0003557843559</td>
+<td>     95</td>
+<td>   1.85</td>
+<td>2.3e-24</td>
+<td>4.0e-21</td>
+<td>  20.39</td>
+<td>     49</td>
+<td>9</td>
+<td>104</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+<tr valign='top'>
+<td>gtgn{7}aca</td>
+<td>gtgn{7}aca|tgtn{7}cac</td>
+<td>0.0003353520622</td>
+<td>     89</td>
+<td>   1.67</td>
+<td>3.7e-24</td>
+<td>6.5e-21</td>
+<td>  20.19</td>
+<td>     50</td>
+<td>2</td>
+<td>91</td>
+<td> 1.0000</td>
+<td></td>
+</tr>
+
+</table><pre>
+ Host name	sinik
+ Job started	2018-03-21.142932
+ Job done	2018-03-21.142939
+ Seconds	7.46
+	user	7.46
+	system	0.09
+	cuser	0.03
+;	csystem	0
+</pre>
+</BODY></HTML>
