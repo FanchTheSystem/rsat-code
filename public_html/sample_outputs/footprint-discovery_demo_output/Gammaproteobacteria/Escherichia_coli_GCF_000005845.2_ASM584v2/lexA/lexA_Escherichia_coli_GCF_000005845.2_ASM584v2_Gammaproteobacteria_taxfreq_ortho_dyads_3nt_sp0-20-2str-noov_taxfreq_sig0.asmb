@@ -1,0 +1,146 @@
+; pattern-assembly  -v 1 -i $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab -subst 1 -weight 5 -maxfl 1 -toppat 50 -max_asmb_nb 5 -o $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.asmb
+; Input file	/space23/rsat/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab
+; Output file	/space23/rsat/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.asmb
+; Input score column           	8
+; Output score column          	0
+; Strand-insensitive assembly
+; Max flanking bases           	1
+; Max substitutions            	1
+; Min matches                  	0
+; Min weight                   	5
+; Max assembly size            	50
+; Max assembly width           	0
+; Top number of patterns       	50
+; Number of input patterns     	50
+;
+
+; assembly # 1	seed: ctgnnnnnnnnnncag	14 assembled patterns	length 20
+;             alignt	             rev_cpl	score
+aacnnnnnnnnnnnncag..	..ctgnnnnnnnnnnnngtt	30.79
+.actnnnnnnnnnnncag..	..ctgnnnnnnnnnnnagt.	151.32
+..ctgnnnnnnnnnncag..	..ctgnnnnnnnnnncag..	222.10
+..ctgnnnnnnnnnaca...	...tgtnnnnnnnnncag..	204.14
+..ctgnnnnnnnntac....	....gtannnnnnnncag..	175.18
+..ctgnnnnnnnnnnnagt.	.actnnnnnnnnnnncag..	151.32
+..ctgnnnnnnnnnnnngtt	aacnnnnnnnnnnnncag..	30.79
+..ctgnnnnnnnncac....	....gtgnnnnnnnncag..	20.68
+...tgtnnnnnnnnncag..	..ctgnnnnnnnnnaca...	204.14
+...tgtnnnnnnnnaca...	...tgtnnnnnnnnaca...	163.79
+...tggnnnnnnnnncag..	..ctgnnnnnnnnncca...	37.40
+...tggnnnnnnnnaca...	...tgtnnnnnnnncca...	31.98
+...tggnnnnnnnnnnagt.	.actnnnnnnnnnncca...	23.70
+.............tacagt.	.actgta.............	105.84
+aactgnnnnnnnnnacagtt	aactgtnnnnnnnnncagtt	222.10	best consensus
+
+; assembly # 2	seed: atacag	34 assembled patterns	length 14
+;       alignt	       rev_cpl	score
+actgta........	........tacagt	105.84
+actnnata......	......tatnnagt	81.58
+actntat.......	.......atanagt	75.10
+actnnnnata....	....tatnnnnagt	24.89
+actnnntat.....	.....atannnagt	24.15
+.ctgtat.......	.......atacag.	150.00
+.ctgnata......	......tatncag.	147.63
+.ctgnntat.....	.....atanncag.	70.55
+.ctgnnnata....	....tatnnncag.	60.25
+.ctgnnnntac...	...gtannnncag.	22.28
+..tgtata......	......tataca..	138.41
+..tgtntat.....	.....atanaca..	76.98
+..tgtnnata....	....tatnnaca..	55.49
+..tgtnnntac...	...gtannnaca..	31.80
+...gtatat.....	.....atatac...	71.34
+...gtanata....	....tatntac...	51.76
+...gtannnaca..	..tgtnnntac...	31.80
+...gtanntac...	...gtanntac...	30.66
+...gtannnncag.	.ctgnnnntac...	22.28
+....tatnnncag.	.ctgnnnata....	60.25
+....tatata....	....tatata....	59.74
+....tatnnaca..	..tgtnnata....	55.49
+....tatntac...	...gtanata....	51.76
+....tatnnnnagt	actnnnnata....	24.89
+.....atanaca..	..tgtntat.....	76.98
+.....atatac...	...gtatat.....	71.34
+.....atanncag.	.ctgnntat.....	70.55
+.....atannnagt	actnnntat.....	24.15
+......tatncag.	.ctgnata......	147.63
+......tataca..	..tgtata......	138.41
+......tatnnagt	actnnata......	81.58
+.......atacag.	.ctgtat.......	150.00
+.......atanagt	actntat.......	75.10
+........tacagt	actgta........	105.84
+actgtatatacagt	actgtatatacagt	150.00	best consensus
+
+; assembly # 3	seed: gtannnnnnnaca	20 assembled patterns	length 20
+;             alignt	             rev_cpl	score
+aacnnnnnnnnnnnncag..	..ctgnnnnnnnnnnnngtt	30.79
+.actnnnnnnnnnnncag..	..ctgnnnnnnnnnnnagt.	151.32
+.actgta.............	.............tacagt.	105.84
+.actntat............	............atanagt.	75.10
+..ctgnnnnnnnnnncag..	..ctgnnnnnnnnnncag..	222.10
+..ctgnnnnnnnnnaca...	...tgtnnnnnnnnncag..	204.14
+..ctgnnnnnnnntac....	....gtannnnnnnncag..	175.18
+..ctgnnnnnnnnnnnagt.	.actnnnnnnnnnnncag..	151.32
+..ctgtat............	............atacag..	150.00
+..ctgnnnnnnnnnnnngtt	aacnnnnnnnnnnnncag..	30.79
+..ctgnnnnnnnncac....	....gtgnnnnnnnncag..	20.68
+...tgtnnnnnnnnncag..	..ctgnnnnnnnnnaca...	204.14
+...tgtnnnnnnnnaca...	...tgtnnnnnnnnaca...	163.79
+...tgtnnnnnnntac....	....gtannnnnnnaca...	135.48
+...tgtnnnnnnncac....	....gtgnnnnnnnaca...	20.19
+....gtannnnnnnncag..	..ctgnnnnnnnntac....	175.18
+....gtannnnnnnaca...	...tgtnnnnnnntac....	135.48
+.....tatnnnnnnncag..	..ctgnnnnnnnata.....	110.56
+.....tatnnnnnnaca...	...tgtnnnnnnata.....	91.90
+.............tacagt.	.actgta.............	105.84
+aactgtannnnnnnacagtt	aactgtnnnnnnntacagtt	222.10	best consensus
+
+; assembly # 4	seed: atannnnnncag	29 assembled patterns	length 20
+;             alignt	             rev_cpl	score
+aacnnnnnnnnnnnncag..	..ctgnnnnnnnnnnnngtt	30.79
+.actnnnnnnnnnnncag..	..ctgnnnnnnnnnnnagt.	151.32
+.actgta.............	.............tacagt.	105.84
+.actnnata...........	...........tatnnagt.	81.58
+.actntat............	............atanagt.	75.10
+.actnnntat..........	..........atannnagt.	24.15
+.actnnnnnnnnnncca...	...tggnnnnnnnnnnagt.	23.70
+..ctgnnnnnnnnnncag..	..ctgnnnnnnnnnncag..	222.10
+..ctgnnnnnnnnnaca...	...tgtnnnnnnnnncag..	204.14
+..ctgnnnnnnnnnnnagt.	.actnnnnnnnnnnncag..	151.32
+..ctgtat............	............atacag..	150.00
+..ctgnata...........	...........tatncag..	147.63
+..ctgnntat..........	..........atanncag..	70.55
+..ctgnnnnnnnnncca...	...tggnnnnnnnnncag..	37.40
+..ctgnnnnnnnnnnnngtt	aacnnnnnnnnnnnncag..	30.79
+...tgtnnnnnnnnncag..	..ctgnnnnnnnnnaca...	204.14
+...tgtnnnnnnnnaca...	...tgtnnnnnnnnaca...	163.79
+...tgtata...........	...........tataca...	138.41
+...tgtntat..........	..........atanaca...	76.98
+...tgtnnnnnnnncca...	...tggnnnnnnnnaca...	31.98
+....gtannnnnnnncag..	..ctgnnnnnnnntac....	175.18
+....gtannnnnnnaca...	...tgtnnnnnnntac....	135.48
+....gtatat..........	..........atatac....	71.34
+.....tatnnnnnnncag..	..ctgnnnnnnnata.....	110.56
+.....tatnnnnnnaca...	...tgtnnnnnnata.....	91.90
+......atannnnnncag..	..ctgnnnnnntat......	118.21
+......atannnnnaca...	...tgtnnnnntat......	73.36
+.......tatnnnnncag..	..ctgnnnnnata.......	55.96
+.......tatnnnnnnagt.	.actnnnnnnata.......	21.57
+aactgtatannnnnncagtt	aactgnnnnnntatacagtt	222.10	best consensus
+
+; assembly # 5	seed: cctnnnnnnnnnnncag	5 assembled patterns	length 18
+;           alignt	           rev_cpl	score
+cctnnnnnnnnnnncag.	.ctgnnnnnnnnnnnagg	59.17
+cctnnnnnnnnnnaca..	..tgtnnnnnnnnnnagg	48.04
+cctnnnnnnnnnnnnagt	actnnnnnnnnnnnnagg	40.48
+.ctgnnnnnnnnnncag.	.ctgnnnnnnnnnncag.	222.10
+.ctgnnnnnnnnnnnagt	actnnnnnnnnnnncag.	151.32
+cctnnnnnnnnnnncagt	actgnnnnnnnnnnnagg	222.10	best consensus
+; Maximal number of assemblies is reached (5). Remaining patterns: 10.
+; Host name	sinik
+; Job started	2018-03-21.142940
+; Job done	2018-03-21.142947
+; Seconds	6.67
+;	user	6.67
+;	system	0.02
+;	cuser	0
+;	csystem	0
