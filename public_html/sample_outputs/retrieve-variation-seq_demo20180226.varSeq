@@ -1,0 +1,46 @@
+; retrieve-variation-seq -species Homo_sapiens -assembly GRCh37 -i /Users/amedina/local/rsat/public_html/tmp/amedina/2018/03/22/retrieve-variation-seq_-v_0_2018-03-22.173629_kkjUt7retrieve-variation-seq_input -format varBed -mml 30
+; retrieve-variation-seq -species Homo_sapiens -assembly GRCh37 -i /Users/amedina/local/rsat/public_html/tmp/amedina/2018/03/22/retrieve-variation-seq_-v_0_2018-03-22.173629_kkjUt7retrieve-variation-seq_input -format varBed -mml 30
+; Input  file
+; 	/Users/amedina/local/rsat/public_html/tmp/amedina/2018/03/22/retrieve-variation-seq_-v_0_2018-03-22.173629_kkjUt7retrieve-variation-seq_input
+; Column contents
+; chr          - Chromosome
+; start        - Start position
+; end          - End position
+; strand       - Strand
+; id           - Identifier
+; soterm       - Sequence ontology (SO) term describing variation type
+; ref_var      - Reference variant
+; alt_var      - Alternative variant
+; allele_freq  - Frequency of the current allele
+; seq          - Sequence of the current variant, flanked by a user-specified neighbouring region
+#chr	start	end	strand	id	soterm	ref_var	alt_var	allele_freq	seq
+1	109817590	109817590	+	rs12740374	SNV	G	T	0.18641	aacacagtgctggctcggctgccctgagggTtgctcaatcaagcacaggtttcaagtctgg
+1	109817590	109817590	+	rs12740374	SNV	G	G	0.18641	aacacagtgctggctcggctgccctgagggGtgctcaatcaagcacaggtttcaagtctgg
+10	123333997	123333997	+	rs7895676	SNV	C	T	0.376033	gggaggcgggggttgcagtgagcccagatcTgcaccactgcactccagcctgggtgacaga
+10	123333997	123333997	+	rs7895676	SNV	C	C	0.376033	gggaggcgggggttgcagtgagcccagatcCgcaccactgcactccagcctgggtgacaga
+10	123340311	123340311	+	rs2981578	SNV	C	T	0.37787	acagttaacctttcttccctgctccaaaccTgcatatttgcatagaggtaaaagcttcaag
+10	123340311	123340311	+	rs2981578	SNV	C	C	0.37787	acagttaacctttcttccctgctccaaaccCgcatatttgcatagaggtaaaagcttcaag
+10	123340431	123340432	+	rs35054928	deletion	CC	C	0.485767	ggaagctttagatctcagaagggctgtgcgCcggctcccacgaatgtaggctttctgggac
+10	123340431	123340432	+	rs35054928	deletion	CC	CC	0.485767	ggaagctttagatctcagaagggctgtgcgCCcggctcccacgaatgtaggctttctgggac
+11	69234620	69234620	+	rs7948643	SNV	T	C	0.203857	ggtgctcaggggtcggcgctcaggatcactCgggcagccgtacgtgtcccaggcagcggga
+11	69234620	69234620	+	rs7948643	SNV	T	T	0.203857	ggtgctcaggggtcggcgctcaggatcactTgggcagccgtacgtgtcccaggcagcggga
+11	69331642	69331642	+	rs554219	SNV	C	G	0.114325	atgaaggtctagagcagggaaatcctcaccGggaaacccacagtcaacccagcacctcctg
+11	69331642	69331642	+	rs554219	SNV	C	C	0.114325	atgaaggtctagagcagggaaatcctcaccCggaaacccacagtcaacccagcacctcctg
+11	69379161	69379161	+	rs75915166	SNV	C	A	0.0284665	aaggctcttaagagatgagatcatccaggcAttaacagggtgggccctaaatcccccgaca
+11	69379161	69379161	+	rs75915166	SNV	C	C	0.0284665	aaggctcttaagagatgagatcatccaggcCttaacagggtgggccctaaatcccccgaca
+16	209709	209709	+	SNP195	SNV	T	C	NA	tgggtgctgagctgccacacccacattattCagaaaataacagcacaggcttggggtggag
+16	209709	209709	+	SNP195	SNV	T	T	NA	tgggtgctgagctgccacacccacattattTagaaaataacagcacaggcttggggtggag
+16	52599188	52599188	+	rs4784227	SNV	C	T	0.21809	ggaaaaaagtcccaatttgtagtgtttgccTgattattgtgatgtaaatactcccatcatg
+16	52599188	52599188	+	rs4784227	SNV	C	C	0.21809	ggaaaaaagtcccaatttgtagtgtttgccCgattattgtgatgtaaatactcccatcatg
+17	69107816	69107816	+	rs8072254	SNV	A	G	0.353076	gtaaatatttgaatggtagaaccggtgagaGacctgaatagtaaatattttatgagaggaa
+17	69107816	69107816	+	rs8072254	SNV	A	A	0.353076	gtaaatatttgaatggtagaaccggtgagaAacctgaatagtaaatattttatgagaggaa
+17	69108655	69108655	+	rs1859961	SNV	A	G	0.00367309	aaagtaaattctcaccccggaaggcaaataGacaattatttcattaaacattcaaatcaca
+17	69108655	69108655	+	rs1859961	SNV	A	A	0.00367309	aaagtaaattctcaccccggaaggcaaataAacaattatttcattaaacattcaaatcaca
+4	145488334	145488334	+	rs1542725	SNV	C	T	0.294307	aagtgctgtggtctgaatgtttgtgtccccTtcccaaattcatagttaaaacttaatcact
+4	145488334	145488334	+	rs1542725	SNV	C	C	0.294307	aagtgctgtggtctgaatgtttgtgtccccCtcccaaattcatagttaaaacttaatcact
+5	159894847	159894847	+	rs57095329	SNV	A	G	0.117539	atttccccgcggggctgcggagagtacagaGcaggaagcctggggacccagcgcctgacca
+5	159894847	159894847	+	rs57095329	SNV	A	A	0.117539	atttccccgcggggctgcggagagtacagaAcaggaagcctggggacccagcgcctgacca
+8	128413305	128413305	+	rs6983267	SNV	G	T	0.436639	catcgtcctttgagctcagcagatgaaaggTcactgagaaaagtacaaagaatttttatgt
+8	128413305	128413305	+	rs6983267	SNV	G	G	0.436639	catcgtcctttgagctcagcagatgaaaggGcactgagaaaagtacaaagaatttttatgt
+8	128531689	128531689	+	rs11986220	SNV	A	T	0.103765	ttctagccagtgcaattaagaggaaaaaaaTtaaataaaaaggcatatgtgttgaaaggaa
+8	128531689	128531689	+	rs11986220	SNV	A	A	0.103765	ttctagccagtgcaattaagaggaaaaaaaAtaaataaaaaggcatatgtgttgaaaggaa
