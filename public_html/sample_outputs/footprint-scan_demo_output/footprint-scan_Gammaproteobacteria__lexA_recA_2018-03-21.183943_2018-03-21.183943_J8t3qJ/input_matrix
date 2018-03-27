@@ -1,0 +1,79 @@
+AC  LexA.2nt_upstream-noorf-ovlp-2str.20_m1
+XX
+ID  LexA
+XX
+DE  wwaCTGtAtawAwaamCAGy
+PO       A     C     G     T
+1       15     4     3    12
+2       12     4     1    17
+3       25     2     5     2
+4        0    33     0     1
+5        0     0     0    34
+6        0     0    34     0
+7        1     4     6    23
+8       28     3     1     2
+9        0     5     4    25
+10      26     1     5     2
+11      14     2     6    12
+12      28     0     2     4
+13      16     6     1    11
+14      20     3     4     7
+15      14     7     4     9
+16      17    13     1     3
+17       0    33     1     0
+18      33     0     0     1
+19       3     0    31     0
+20       2     9     5    18
+XX
+BA  34 sequences
+XX
+BS  ATACTGTATATAAAAACAGT; site_0; 1; 20; 0; p
+BS  TTACTGTATATAAAACCAGT; site_1; 1; 20; 0; p
+BS  TTACTGTATAAATAAACAGT; site_2; 1; 20; 0; p
+BS  ATACTGGATAAAAAAACAGT; site_3; 1; 20; 0; p
+BS  CTACTGTATATAAAAACAGT; site_4; 1; 20; 0; p
+BS  ATACTGTATAAAATCACAGT; site_5; 1; 20; 0; p
+BS  CAACTGTATATAAATACAGT; site_6; 1; 20; 0; p
+BS  TCACTGTATAAATAAACAGC; site_7; 1; 20; 0; p
+BS  TAACTGTATATACACCCAGG; site_8; 1; 20; 0; p
+BS  TACCTGTATAAATAACCAGT; site_9; 1; 20; 0; p
+BS  ACACTGGATAGATAACCAGC; site_10; 1; 20; 0; p
+BS  ATGCTGGATAGATATCCAGC; site_11; 1; 20; 0; p
+BS  AATCTGTATATATACCCAGC; site_12; 1; 20; 0; p
+BS  ATACTGTACACAATAACAGT; site_13; 1; 20; 0; p
+BS  TTGCTGTATATACTCACAGC; site_14; 1; 20; 0; p
+BS  TTACTGTATGGATGTACAGT; site_15; 1; 20; 0; p
+BS  ATACTGTATAAACAGCCAAT; site_16; 1; 20; 0; p
+BS  TAACTGGATAATCATACAGT; site_17; 1; 20; 0; p
+BS  ATACTGTATGAGCATACAGT; site_18; 1; 20; 0; p
+BS  CAACTGGATAAAATTACAGG; site_19; 1; 20; 0; p
+BS  TGACTGTATAAAACCACAGC; site_20; 1; 20; 0; p
+BS  ATACTGTACGTATCGACAGT; site_21; 1; 20; 0; p
+BS  TTGCTGTATGGATTAACAGG; site_22; 1; 20; 0; p
+BS  ATACTGTATATTCATTCAGG; site_23; 1; 20; 0; p
+BS  TACCTGTATATATCATCAGT; site_24; 1; 20; 0; p
+BS  AAACTGCACAATAAACCAGA; site_25; 1; 20; 0; p
+BS  CAACTGATTAAAAACCCAGC; site_26; 1; 20; 0; p
+BS  TAACTGTCGATAAGCGCAGC; site_27; 1; 20; 0; p
+BS  GCACTGTATAAAAATCCTAT; site_28; 1; 20; 0; p
+BS  ACGCTGCCCTGAAAGCCAGG; site_29; 1; 20; 0; p
+BS  ATACTGTGCCATTTTTCAGT; site_30; 1; 20; 0; p
+BS  AAGCTGGCGTTGATGCCAGC; site_31; 1; 20; 0; p
+BS  GATCTGCTGGCAAGAACAGA; site_32; 1; 20; 0; p
+BS  GTATTGCAGAGAGGACGAAT; site_33; 1; 20; 0; p
+CC  program: meme
+CC  matrix.nb: 1
+CC  command: meme /Users/amedina/work_area/Regulon_matrix_eval/data/Sites_FNA_NR/LexA.19.fna -dna -mod oops -revcomp -text -nostatus -minw 20 -maxw 20 -bfile /Users/amedina/work_area/Regulon_matrix_eval/data/bg_freqs/2nt_upstream-noorf_Escherichia_coli_K12-ovlp-2str.meme_bg
+CC  sites: 34
+CC  meme.llr: 430
+CC  meme.E-value: 2.0e-088
+CC  matrix.nb: 1
+CC  sites: 34
+CC  consensus.strict: ataCTGtAtaaAaaacCAGt
+CC  consensus.strict.rc: ACTGGTTTTTTATACAGTAT
+CC  consensus.IUPAC: wwaCTGtAtawAwaamCAGy
+CC  consensus.IUPAC.rc: RCTGKTTWTWTATACAGTWW
+CC  consensus.regexp: [at][at]aCTGtAta[at]A[at]aa[ac]CAG[ct]
+CC  consensus.regexp.rc: [AG]CTG[GT]TT[AT]T[AT]TATACAGT[AT][AT]
+XX
+//
