@@ -1,0 +1,124 @@
+; dyad-analysis  -v 1 -return occ,proba,rank -expfreq $RSAT/public_html/data/taxon_frequencies/Gammaproteobacteria/dyads_3nt_sp0-20_upstream-noorf_Gammaproteobacteria-noov-2str.freq -accept $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_filter_dyads.tab -lth occ 1 -lth occ_sig 0 -uth rank 50 -i $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_seq_purged.fasta -l 3 -sp 0-20 -2str -noov -sort -o $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab
+; Citation: van Helden et al. (2000). Nucleic Acids Res. 28(8):1808-18.
+; Program version              	1.78
+; Input file                   	$RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_seq_purged.fasta
+; Accepted dyad file           	$RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_filter_dyads.tab
+; Accepted dyads               	3469
+; Sequence type                	DNA
+; Output file                  	$RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_dyads_3nt_sp0-20-2str-noov_taxfreq_sig0.tab
+; default return values        	freq,occ
+; return values                	proba,occ,exp_freq,exp_occ,rank
+; Discard overlapping matches
+; Counted on both strands
+; 	grouped by pairs of reverse complements
+; Monad parameters             
+; 	monad size                  	3
+; 	monad positions              368958
+; 	    valid                    	79978
+; 	    discarded                	288980 (contain other letters than ACGT)
+; 	distinct monads              64
+; Dyad parameters              
+; 	dyad type                    any dyad
+; 	minimal spacing              0
+; 	maximal spacing              20
+; 	distinct dyads               	43680
+; 	dyads tested for significance	1757
+;	Dyad counts per spacing
+;		spacing	max_pos	occ	ovlps	ovl+occ	ACGT	nonACGT
+;		sp 0	361414	5742	106	5848	77439	283975
+;		sp 1	358922	5298	113	5411	76642	282280
+;		sp 2	356430	5209	138	5347	75869	280561
+;		sp 3	353938	5023	102	5125	75112	278826
+;		sp 4	351447	5123	124	5247	74366	277081
+;		sp 5	348956	5415	127	5542	73633	275323
+;		sp 6	346465	5089	149	5238	72908	273557
+;		sp 7	343975	4982	183	5165	72192	271783
+;		sp 8	341486	5177	179	5356	71484	270002
+;		sp 9	338997	4501	376	4877	70783	268214
+;		sp 10	336508	4286	126	4412	70110	266398
+;		sp 11	334019	4404	199	4603	69449	264570
+;		sp 12	331530	3882	100	3982	68798	262732
+;		sp 13	329041	3884	89	3973	68154	260887
+;		sp 14	326552	3645	131	3776	67518	259034
+;		sp 15	324063	3529	133	3662	66887	257176
+;		sp 16	321574	3664	200	3864	66265	255309
+;		sp 17	319085	3730	193	3923	65652	253433
+;		sp 18	316596	3644	281	3925	65044	251552
+;		sp 19	314107	3301	230	3531	64439	249668
+;		sp 20	311618	3242	191	3433	63842	247776
+; Estimation of expected dyad frequencies
+;	Background model	exp_freq_file
+;	exp. freq. file       	$RSAT/public_html/data/taxon_frequencies/Gammaproteobacteria/dyads_3nt_sp0-20_upstream-noorf_Gammaproteobacteria-noov-2str.freq
+; column headers
+;	1	sequence       	
+;	2	identifier             	
+;	3	expected_freq  	
+;	4	occ            	observed occurrences
+;	5	exp_occ        	expected occurrences
+;	6	occ_P          	occurrence probability (binomial)
+;	7	occ_E          	E-value for occurrences (binomial)
+;	8	occ_sig        	occurrence significance (binomial)
+;	9	rank           	rank
+;	10	ovl_occ        	number of overlapping occurrences
+;	11	all_occ        	number of non-overlapping + overlapping occurrences
+;	12	ov_coef        	overlap coefficient
+;	13	remark         	remark (dir_rep=direct repeat; rc_pal=reverse complementary palindrom)
+#sequence  	identifier             	expected_freq	occ	exp_occ	occ_P	occ_E	occ_sig	rank	ovl_occ	all_occ	ov_coef	remark
+ctgn{10}cag	ctgn{10}cag|ctgn{10}cag	0.0003456874153	    314	   1.48	4.5e-226	8.0e-223	 222.10	      1	0	314	 1.0000	rc_pal
+ctgn{9}aca	ctgn{9}aca|tgtn{9}cag	0.0005083601722	    346	   2.29	4.1e-208	7.2e-205	 204.14	      2	195	541	 1.0000	
+ctgn{8}tac	ctgn{8}tac|gtan{8}cag	0.0003739946179	    281	   1.94	3.7e-179	6.5e-176	 175.18	      3	8	289	 1.0010	
+tgtn{8}aca	tgtn{8}aca|tgtn{8}aca	0.0002933554708	    246	   1.52	9.2e-168	1.6e-164	 163.79	      4	0	246	 1.0000	rc_pal
+actn{11}cag	actn{11}cag|ctgn{11}agt	0.0004108612830	    264	   1.81	2.8e-155	4.8e-152	 151.32	      5	61	325	 1.0000	
+atan{0}cag	atan{0}cag|ctgn{0}tat	0.0005080478754	    300	   2.92	5.7e-154	1.0e-150	 150.00	      6	0	300	 1.0000	
+ctgn{1}ata	ctgn{1}ata|tatn{1}cag	0.0005906601121	    316	   3.13	1.3e-151	2.3e-148	 147.63	      7	0	316	 1.0000	
+tatn{0}aca	tatn{0}aca|tgtn{0}ata	0.0004887765724	    282	   2.81	2.2e-142	3.9e-139	 138.41	      8	15	297	 1.0000	
+gtan{7}aca	gtan{7}aca|tgtn{7}tac	0.0003742870433	    242	   1.86	1.9e-139	3.3e-136	 135.48	      9	25	267	 1.0000	
+atan{6}cag	atan{6}cag|ctgn{6}tat	0.0005962825672	    275	   3.03	3.5e-122	6.1e-119	 118.21	     10	1	276	 1.0000	
+ctgn{7}ata	ctgn{7}ata|tatn{7}cag	0.0005710708062	    259	   2.85	1.6e-114	2.7e-111	 110.56	     11	4	263	 1.0000	
+actn{0}gta	actn{0}gta|tacn{0}agt	0.0003689572643	    215	   2.12	8.2e-110	1.4e-106	 105.84	     12	0	215	 1.0010	
+tatn{6}aca	tatn{6}aca|tgtn{6}ata	0.0006914357351	    259	   3.52	7.2e-96	1.3e-92	  91.90	     13	9	268	 1.0000	
+actn{2}ata	actn{2}ata|tatn{2}agt	0.0005473261470	    222	   2.85	1.5e-85	2.6e-82	  81.58	     14	4	226	 1.0010	
+atan{1}aca	atan{1}aca|tgtn{1}tat	0.0007268155597	    250	   3.85	5.9e-81	1.0e-77	  76.98	     15	6	256	 1.0010	
+actn{1}tat	actn{1}tat|atan{1}agt	0.0005888404156	    222	   3.12	4.5e-79	7.9e-76	  75.10	     16	3	225	 1.0000	
+atan{5}aca	atan{5}aca|tgtn{5}tat	0.0007718740120	    247	   4.18	2.5e-77	4.3e-74	  73.36	     17	5	252	 1.0010	
+atan{0}tac	atan{0}tac|gtan{0}tat	0.0004714560800	    195	   2.71	2.6e-75	4.6e-72	  71.34	     18	63	258	 1.0000	
+atan{2}cag	atan{2}cag|ctgn{2}tat	0.0006594312496	    227	   3.43	1.6e-74	2.8e-71	  70.55	     19	1	228	 1.0000	
+ctgn{3}ata	ctgn{3}ata|tatn{3}cag	0.0006483049960	    208	   3.26	3.2e-64	5.7e-61	  60.25	     20	12	220	 1.0000	
+tatn{0}ata	tatn{0}ata|tatn{0}ata	0.0004010086656	    165	   2.30	  1e-63	1.8e-60	  59.74	     21	5	170	 1.0664	rc_pal
+cctn{11}cag	cctn{11}cag|ctgn{11}agg	0.0004347873990	    162	   1.91	3.8e-63	6.7e-60	  59.17	     22	5	167	 1.0000	
+ctgn{5}ata	ctgn{5}ata|tatn{5}cag	0.0005996195247	    191	   3.25	6.2e-60	1.1e-56	  55.96	     23	2	193	 1.0000	
+tatn{2}aca	tatn{2}aca|tgtn{2}ata	0.0008003481114	    226	   4.17	1.9e-59	3.3e-56	  55.49	     24	17	243	 1.0000	
+gtan{1}ata	gtan{1}ata|tatn{1}tac	0.0005564973169	    181	   2.95	9.9e-56	1.7e-52	  51.76	     25	64	245	 1.0000	
+atan{4}cag	atan{4}cag|ctgn{4}tat	0.0006338089480	    189	   3.25	1.4e-54	2.5e-51	  50.61	     26	12	201	 1.0000	
+cctn{10}aca	cctn{10}aca|tgtn{10}agg	0.0004405193135	    148	   1.89	5.2e-52	9.2e-49	  48.04	     27	3	151	 1.0000	
+actn{12}agg	actn{12}agg|cctn{12}agt	0.0003242987355	    116	   1.26	1.9e-44	3.3e-41	  40.48	     28	0	116	 1.0000	
+cctn{9}tac	cctn{9}tac|gtan{9}agg	0.0003293593663	    117	   1.48	2.3e-43	4.0e-40	  39.40	     29	0	117	 1.0010	
+ctgn{9}cca	ctgn{9}cca|tggn{9}cag	0.0004372000158	    132	   1.97	2.3e-41	4.0e-38	  37.40	     30	2	134	 1.0000	
+tatn{4}aca	tatn{4}aca|tgtn{4}ata	0.0007292375725	    176	   3.74	3.1e-39	5.5e-36	  35.26	     31	5	181	 1.0000	
+tggn{8}aca	tggn{8}aca|tgtn{8}cca	0.0003741727687	    114	   1.94	  6e-36	1.1e-32	  31.98	     32	0	114	 1.0000	
+gtan{3}aca	gtan{3}aca|tgtn{3}tac	0.0003877729118	    119	   1.95	8.9e-36	1.6e-32	  31.80	     33	6	125	 1.0000	
+aacn{12}cag	aacn{12}cag|ctgn{12}gtt	0.0005532558071	    136	   2.15	9.2e-35	1.6e-31	  30.79	     34	7	143	 1.0000	
+gtan{2}tac	gtan{2}tac|gtan{2}tac	0.0001341736266	     70	   0.70	1.3e-34	2.2e-31	  30.66	     35	0	70	 1.0000	rc_pal
+cctn{8}ata	cctn{8}ata|tatn{8}agg	0.0005024079917	    130	   2.60	7.7e-34	1.4e-30	  29.87	     36	0	130	 1.0000	
+atan{12}ctg	atan{12}ctg|cagn{12}tat	0.0005414740995	    128	   2.10	2.9e-31	5.1e-28	  27.29	     37	5	133	 1.0000	
+atan{7}agg	atan{7}agg|cctn{7}tat	0.0005135899914	    126	   2.56	2.3e-30	4.0e-27	  26.40	     38	0	126	 1.0000	
+cagn{13}ata	cagn{13}ata|tatn{13}ctg	0.0005599987026	    126	   2.18	  3e-29	5.2e-26	  25.28	     39	10	136	 1.0000	
+actn{4}ata	actn{4}ata|tatn{4}agt	0.0005972642552	    137	   3.06	7.4e-29	1.3e-25	  24.89	     40	8	145	 1.0010	
+actn{3}tat	actn{3}tat|atan{3}agt	0.0006096237898	    138	   3.06	4.1e-28	7.1e-25	  24.15	     41	1	139	 1.0000	
+gtgn{5}ata	gtgn{5}ata|tatn{5}cac	0.0004598655572	    115	   2.49	7.5e-28	1.3e-24	  23.88	     42	1	116	 1.0000	
+ctgn{11}aga	ctgn{11}aga|tctn{11}cag	0.0004165660271	    105	   1.83	9.2e-28	1.6e-24	  23.79	     43	2	107	 1.0000	
+actn{10}cca	actn{10}cca|tggn{10}agt	0.0002994277595	     88	   1.28	1.1e-27	2.0e-24	  23.70	     44	0	88	 1.0010	
+atan{3}aca	atan{3}aca|tgtn{3}tat	0.0008723676684	    169	   4.38	1.2e-26	2.0e-23	  22.69	     45	12	181	 1.0010	
+ctgn{4}tac	ctgn{4}tac|gtan{4}cag	0.0003870569077	    102	   1.98	  3e-26	5.3e-23	  22.28	     46	0	102	 1.0010	
+actn{6}ata	actn{6}ata|tatn{6}agt	0.0005931467013	    128	   3.02	1.5e-25	2.7e-22	  21.57	     47	4	132	 1.0010	
+ctgn{8}cac	ctgn{8}cac|gtgn{8}cag	0.0004163015311	    101	   2.16	1.2e-24	2.1e-21	  20.68	     48	0	101	 1.0010	
+actn{2}cag	actn{2}cag|ctgn{2}agt	0.0003557843559	     95	   1.85	2.3e-24	4.0e-21	  20.39	     49	9	104	 1.0000	
+gtgn{7}aca	gtgn{7}aca|tgtn{7}cac	0.0003353520622	     89	   1.67	3.7e-24	6.5e-21	  20.19	     50	2	91	 1.0000	
+; Host name	sinik
+; Job started	2018-03-21.142932
+; Job done	2018-03-21.142939
+; Seconds	7.46
+;	user	7.46
+;	system	0.09
+;	cuser	0.03
+;	csystem	0
