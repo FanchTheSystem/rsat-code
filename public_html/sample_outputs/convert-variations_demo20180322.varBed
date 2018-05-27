@@ -1,0 +1,43 @@
+; convert-variations -i $RSAT/public_html/tmp/amedina/2018/03/22/convert-variations_2018-03-22.173648_ut2UIGconvert-variations_input -from gvf -to varBed
+<blockquote class='timewarn'>
+<font color='#006600'><b>TimeWarn: </b>2018-03-22.173648	Reading input file</font>
+</blockquote><br><hr size=3>
+; convert-variations -i /Users/amedina/local/rsat/public_html/tmp/amedina/2018/03/22/convert-variations_2018-03-22.173648_ut2UIGconvert-variations_input -from gvf -to varBed
+; Phased                 False
+; Homozygotes            False
+;
+; column headers
+; 1  chr                 variant chromosome
+; 2  start               variant reference start
+; 3  end                 variant reference end
+; 4  strand              variant reference strand (+)
+; 5  id                  variant identifier
+; 6  ref                 reference allele
+; 7  alt                 single or list of alt alleles
+; 8  so_term             single or list of variant types
+; 9  validate            validation status if provided
+; 10 minor_allele_freq   MAF if provided
+#chr	start	end	strand	id	ref	alt	so_term	validate	minor_allele_freq
+11	69331641	69331642	+	rs554219	C	G	SNV	1	0.114325
+4	145488333	145488334	+	rs1542725	C	T	SNV	1	0.294307
+16	209708	209709	+	SNP195	T	C	SNV	1	NA
+17	69108654	69108655	+	rs1859961	A	G	SNV	1	0.00367309
+10	123333996	123333997	+	rs7895676	C	T	SNV	1	0.376033
+8	128413304	128413305	+	rs6983267	G	T	SNV	1	0.436639
+10	123340431	123340432	+	rs35054928	C	-	deletion	1	0.485767
+5	159894846	159894847	+	rs57095329	A	G	SNV	1	0.117539
+1	109817589	109817590	+	rs12740374	G	T	SNV	1	0.18641
+8	128531688	128531689	+	rs11986220	A	T	SNV	1	0.103765
+10	123340310	123340311	+	rs2981578	C	T	SNV	1	0.37787
+11	69379160	69379161	+	rs75915166	C	A	SNV	1	0.0284665
+11	69234619	69234620	+	rs7948643	T	C	SNV	1	0.203857
+17	69107815	69107816	+	rs8072254	A	G	SNV	1	0.353076
+16	52599187	52599188	+	rs4784227	C	T	SNV	1	0.21809
+; Host name	Alejandras-Mac-Pro.local
+; Job started	2018-03-22.173648
+; Job done	2018-03-22.173648
+; Seconds	0.27
+;	user	0.27
+;	system	0.03
+;	cuser	0
+;	csystem	0

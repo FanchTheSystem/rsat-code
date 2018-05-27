@@ -1,0 +1,4 @@
+; Command: footprint-discovery  -v 1 -nodie -org Escherichia_coli_GCF_000005845.2_ASM584v2 -taxon Gammaproteobacteria -genes $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/lexA_genes -sep_genes -lth occ 1 -lth occ_sig 0 -uth rank 50 -return occ,proba,rank -filter -bg_model taxfreq -task query_seq,filter_dyads,orthologs,ortho_seq,purge,dyads,maps,gene_index,index -o $RSAT/public_html/tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ
+ <tr>
+#Query nb	Query	Query name	Status	Query promoter length	Orthologs	Sum ortholog sequence sizes	Top dyad	Max sig	Nb dyads	Nb matrices
+1	lexA	lexA	OK	109	2589	373883	ctgn{10}cag|ctgn{10}cag	 222.10	50	5
