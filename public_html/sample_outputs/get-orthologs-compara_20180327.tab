@@ -1,0 +1,45 @@
+; get-orthologs-compara  -v 1 -i $RSAT/public_html/tmp/apache/2018/03/27/get-orthologs-compara_2018-03-27.115256_YoTxDe_query.txt -org_list $RSAT/public_html/tmp/apache/2018/03/27/get-orthologs-compara_2018-03-27.115256_YoTxDe_organism.txt -type ortholog -ident_target 70 -ident_query 70
+; BerkeleyDBD file: $RSAT/data/genomes/compara.bdb
+; Input files
+;	input	$RSAT/public_html/tmp/apache/2018/03/27/get-orthologs-compara_2018-03-27.115256_YoTxDe_query.txt
+;	org_list	$RSAT/public_html/tmp/apache/2018/03/27/get-orthologs-compara_2018-03-27.115256_YoTxDe_organism.txt
+; Compara options
+;	type          	ortholog
+;	ident_target  	70
+;	ident_query   	70
+; Query genes	1
+;	Bradi1g48830
+; Reference organisms	9
+;	brachypodium_distachyon
+;	hordeum_vulgare
+;	oryza_indica
+;	oryza_sativa
+;	setaria_italica
+;	sorghum_bicolor
+;	triticum_aestivum
+;	triticum_urartu
+;	zea_mays
+; target_id	ref_organism	subtype	query_id	query_organism	ident_target	ident_query
+HORVU7Hr1G024610	Hordeum_vulgare.IBSCv2.37	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	94.4134	95.4802
+HORVU3Hr1G087100	Hordeum_vulgare.IBSCv2.37	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	94.4134	95.4802
+BGIOSGA022349	Oryza_indica.ASM465v1.37	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	88.764	89.2655
+Os06g0157700	Oryza_sativa.IRGSP-1.0.38	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	90.5028	91.5254
+Os06g0157500	Oryza_sativa.IRGSP-1.0.38	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	88.764	89.2655
+Si008517m.g	Setaria_italica.JGIv2.0.37	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	92.1348	92.6554
+Si007366m.g	Setaria_italica.JGIv2.0.37	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	85.3107	85.3107
+Si008120m.g	Setaria_italica.JGIv2.0.37	ortholog_one2many	Bradi1g48830	Brachypodium_distachyon.v1.0.37	88.4848	82.4859
+SORBI_3010G045100	Sorghum_bicolor.Sorghum_bicolor_NCBIv3.38	ortholog_one2one	Bradi1g48830	Brachypodium_distachyon.v1.0.37	90.5028	91.5254
+TRIAE_CS42_7DS_TGACv1_621674_AA2022890	Triticum_aestivum.TGACv1.37	ortholog_one2one	Bradi1g48830	Brachypodium_distachyon.v1.0.37	95.4802	95.4802
+TRIAE_CS42_7BS_TGACv1_595178_AA1958810	Triticum_aestivum.TGACv1.37	ortholog_one2one	Bradi1g48830	Brachypodium_distachyon.v1.0.37	96.0452	96.0452
+TRIAE_CS42_7AS_TGACv1_569837_AA1825000	Triticum_aestivum.TGACv1.37	ortholog_one2one	Bradi1g48830	Brachypodium_distachyon.v1.0.37	96.0452	96.0452
+Zm00001d036242	Zea_mays.B73RefGen_v4.38	ortholog_one2one	Bradi1g48830	Brachypodium_distachyon.v1.0.37	93.2203	93.2203
+; Total homologues reported	13
+; Total homologues for Bradi1g48830	13
+; Host name	rsat
+; Job started	2018-03-27.115256
+; Job done	2018-03-27.115256
+; Seconds	0.2
+;	user	0.2
+;	system	0.02
+;	cuser	0
+;	csystem	0

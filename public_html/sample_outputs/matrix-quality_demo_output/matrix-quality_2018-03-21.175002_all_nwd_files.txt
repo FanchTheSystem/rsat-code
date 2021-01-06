@@ -1,0 +1,4 @@
+LexA.RegulonDB2012	CRP_binding_sites	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/LexA.RegulonDB2012/matrix-quality_2018-03-21.175002_LexA.RegulonDB2012_score_distrib_CRP_binding_sites_nwd.tab
+LexA.RegulonDB2012	LexA_peaks	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/LexA.RegulonDB2012/matrix-quality_2018-03-21.175002_LexA.RegulonDB2012_score_distrib_LexA_peaks_nwd.tab
+CRP.RegulonDB2012	CRP_binding_sites	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_CRP_binding_sites_nwd.tab
+CRP.RegulonDB2012	LexA_peaks	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_LexA_peaks_nwd.tab

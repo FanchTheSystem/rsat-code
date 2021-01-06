@@ -1,0 +1,41 @@
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Annotation table not found, skipped	data/genomes/Escherichia_coli_GCF_000005845.2_ASM584v2/genome/start_codon.tab</font>
+</blockquote><br><hr size=3>
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Annotation table not found, skipped	data/genomes/Escherichia_coli_GCF_000005845.2_ASM584v2/genome/stop_codon.tab</font>
+</blockquote><br><hr size=3>
+<blockquote class='warning'>
+<font color='#FFAA00'><b>Warning: </b>Annotation table not found, skipped	data/genomes/Escherichia_coli_GCF_000005845.2_ASM584v2/genome/exon.tab</font>
+</blockquote><br><hr size=3>
+<blockquote class='information'>
+<font color='#006600'><b>Information: </b>Main index file	tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_bg_taxfreq_result_index.html</font>
+</blockquote><br><hr size=3>
+<blockquote class='information'>
+<font color='#006600'><b>Information: </b>Main table file	tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_bg_taxfreq_result_table.tab</font>
+</blockquote><br><hr size=3>
+<blockquote class='timewarn'>
+<font color='#006600'><b>TimeWarn: </b>2018-03-21.142505	Analyzing query	1/1	lexA	lexA</font>
+</blockquote><br><hr size=3>
+<blockquote class='timewarn'>
+<font color='#006600'><b>TimeWarn: </b>2018-03-21.142748	Extracting sequences from pre-computed upstream sequences</font>
+</blockquote><br><hr size=3>
+; retrieve-seq-multigenome 
+; Input files
+;	input	tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_bbh.tab
+; Output files
+;	output	tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/lexA/lexA_Escherichia_coli_GCF_000005845.2_ASM584v2_Gammaproteobacteria_taxfreq_ortho_seq_notclean.fasta
+; Orhologs found in 2589 organisms
+; Host name	sinik
+; Job started	2018-03-21.142748
+; Job done	2018-03-21.142930
+; Seconds	0.46
+;	user	0.46
+;	system	2.75
+;	cuser	9.45
+;	csystem	8.24
+<blockquote class='timewarn'>
+<font color='#006600'><b>TimeWarn: </b>2018-03-21.143159	Main index file	tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_bg_taxfreq_result_index.html</font>
+</blockquote><br><hr size=3>
+<blockquote class='timewarn'>
+<font color='#006600'><b>TimeWarn: </b>2018-03-21.143159	Main log file	tmp/apache/2018/03/21/footprint-discovery_Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_lexA_2018-03-21.142439_2018-03-21.142439_C9MNSJ/Gammaproteobacteria/Escherichia_coli_GCF_000005845.2_ASM584v2/Gammaproteobacteria_Escherichia_coli_GCF_000005845.2_ASM584v2_bg_taxfreq_log.txt</font>
+</blockquote><br><hr size=3>

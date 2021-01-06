@@ -1,0 +1,51 @@
+; Sequence sets (name, permutations, file)
+; 2018-03-21.175015	Computing score distribution
+;	Sequence type         	matrix_sites
+;	Sequence file         	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix_sites.fasta
+;	Type-specific options 	 -uth rank_pm 1 -1str -uth rank_pm 1 -1str
+; Command:
+/space23/rsat/perl-scripts/matrix-scan -v 0 -matrix_format tab -bg_format inclusive -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix_sites.fasta -m /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix.tab -pseudo 1 -decimals 1 -bgfile /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.1750022nt_upstream-noorf_Escherichia_coli_GCF_000005845.2_ASM584v2-ovlp-1str.freq.gz_inclusive.tab -bg_pseudo 0.01  -uth rank_pm 1 -1str -uth rank_pm 1 -1str -return sites | grep -v '^;' | grep -v '^#' | cut -f 8  | /space23/rsat/perl-scripts/classfreq -v 1 -ci 0.1 -min -30.7 | cut -f 1,4,5,6,9  > /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_scan_matrix_sites_score_distrib.tab
+
+
+; 2018-03-21.175016	Computing score distribution
+;	Sequence type         	LexA_peaks
+;	Sequence file         	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence1.fasta
+; Command:
+/space23/rsat/bin/matrix-scan-quick -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence1.fasta -m /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix.tab -pseudo 1 -decimals 1 -bgfile /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.1750022nt_upstream-noorf_Escherichia_coli_GCF_000005845.2_ASM584v2-ovlp-1str.freq.gz_inclusive.tab -bg_pseudo 0.01 -return distrib  > /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_scan_LexA_peaks_score_distrib.tab
+
+
+; 2018-03-21.175016	Computing score distribution
+;	Sequence type         	LexA_peaks_perm_col_1
+;	Sequence file         	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence1.fasta
+; Command:
+/space23/rsat/bin/matrix-scan-quick -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence1.fasta -m /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix_perm_col_1.tab -pseudo 1 -decimals 1 -bgfile /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.1750022nt_upstream-noorf_Escherichia_coli_GCF_000005845.2_ASM584v2-ovlp-1str.freq.gz_inclusive.tab -bg_pseudo 0.01 -return distrib  > /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_scan_LexA_peaks_perm_col_1_score_distrib.tab
+
+
+; 2018-03-21.175016	Computing score distribution
+;	Sequence type         	CRP_binding_sites
+;	Sequence file         	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence2.fasta
+; Command:
+/space23/rsat/bin/matrix-scan-quick -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence2.fasta -m /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix.tab -pseudo 1 -decimals 1 -bgfile /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.1750022nt_upstream-noorf_Escherichia_coli_GCF_000005845.2_ASM584v2-ovlp-1str.freq.gz_inclusive.tab -bg_pseudo 0.01 -return distrib  > /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_scan_CRP_binding_sites_score_distrib.tab
+
+
+; 2018-03-21.175016	Computing score distribution
+;	Sequence type         	CRP_binding_sites_perm_col_1
+;	Sequence file         	/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence2.fasta
+; Command:
+/space23/rsat/bin/matrix-scan-quick -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/sequence2.fasta -m /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_matrix_perm_col_1.tab -pseudo 1 -decimals 1 -bgfile /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.1750022nt_upstream-noorf_Escherichia_coli_GCF_000005845.2_ASM584v2-ovlp-1str.freq.gz_inclusive.tab -bg_pseudo 0.01 -return distrib  > /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_scan_CRP_binding_sites_perm_col_1_score_distrib.tab
+
+;
+; XYgraph command
+/space23/rsat/perl-scripts/XYgraph   -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_compa.tab -format png -lines -pointsize 0   -xcol 1 -ycol 2,3,4,5,6,7 -ymin 0  -ymax 1  -xgstep1 5 -xgstep2 1 -ygstep1 0.1 -ygstep2 0.02 -gp 'set size ratio 0.5'  -title1 'CRP.RegulonDB2012' -legend  -xsize 800 -ysize 400  -xleg1 'matrix score'  -yleg1 'dCDF (log scale)'    -o /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_compa.png
+;
+; XYgraph command
+/space23/rsat/perl-scripts/XYgraph   -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_compa.tab -format png -lines -pointsize 0   -xcol 1 -ycol 2,3,4,5,6,7 -xgstep1 5 -xgstep2 1 -ymax 1 -ylog 10 -gp 'set size ratio 0.5'  -title1 'CRP.RegulonDB2012' -legend  -xsize 800 -ysize 400  -xleg1 'matrix score'  -yleg1 'dCDF (log scale)'    -o /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_compa_logy.png
+;
+; XYgraph command
+/space23/rsat/perl-scripts/XYgraph -xlog 10   -i /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_compa.tab -format png -lines -pointsize 0   -xcol 2 -ycol 2,3,4,5,6,7 -ygstep1 0.1 -ygstep2 0.02 -ymax 1  -xmax 1  -title1 'CRP.RegulonDB2012' -legend  -xsize 800 -ysize 400  -xleg1 'matrix score'  -yleg1 'dCDF (log scale)'   -o /space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/CRP.RegulonDB2012/matrix-quality_2018-03-21.175002_CRP.RegulonDB2012_score_distrib_compa_roc_xlog.png -xleg1 'FPR (Reference = theor)'  -yleg1 'Site Sn + other distributions' 
+
+
+ cat /space23/rsat/R-scripts/matrix_quality_compare.R | /usr/bin/R --slave --no-save --no-restore --no-environ --args " mtx.quality.nwds.file = '/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.175002_all_nwd_files.txt'; plot.folder = '/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.175002_all_nwd_plot'; formats = 'pdf,png'; print.heatmap = '1' "
+
+
+ cat /space23/rsat/R-scripts/matrix_quality_compare.R | /usr/bin/R --slave --no-save --no-restore --no-environ --args " mtx.quality.nwds.file = '/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.175002_all_nwd_files.txt'; plot.folder = '/space23/rsat/public_html/tmp/apache/2018/03/21/matrix-quality_2018-03-21.175002_zdBRpm/matrix-quality_2018-03-21.175002_all_nwd_plot'; formats = 'pdf,png'; print.heatmap = '1' "
